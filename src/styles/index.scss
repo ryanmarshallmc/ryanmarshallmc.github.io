@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-family: 'Kanit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark-theme {
+  --strong: rgb(47, 181, 120);
+  --strong-rgb: 57, 143, 104;
+  --background: rgb(28, 33, 41);
+  --background-rgb: 28, 33, 41;
+  --foreground: rgb(44, 52, 65);
+  --foreground-rgb: 49, 49, 49;
+  --shadow: rgb(0, 0, 0);
+  --shadow-rgb: 0, 0, 0;
+  --text: rgb(255, 255, 255);
+  --text-rgb: 255, 255, 255;
+}
+
+body.light-theme {
+  --strong: rgb(57, 143, 104);
+  --strong-rgb: 57, 143, 104;
+  --background: rgb(228, 241, 236);
+  --background-rgb: 228, 241, 236;
+  --foreground: rgb(255, 255, 255);
+  --foreground-rgb: 255, 255, 255;
+  --shadow: rgb(56, 56, 56);
+  --shadow-rgb: 56, 56, 56;
+  --text: rgb(18, 18, 18);
+  --text-rgb: 18, 18, 18;
+}
+
+main {
+  &.dark {
+    --background: rgb(18, 18, 18);
+    --text: rgb(239, 255, 248);
+  }
+  &.light {
+    --background: rgb(239, 255, 248);
+    --text: rgb(18, 18, 18);
+  }
+  --black: rgb(18, 18, 18);
+  --black-rgb: 18, 18, 18;
+  --grey: rgb(160, 170, 160);
+  --grey-rgb: 192, 200, 192;
+  --lightgrey: rgb(216, 224, 216);
+  --lightgrey-rgb: 216, 224, 216;
+  --white: rgb(255, 255, 255);
+  --white-rgb: 255, 255, 255;
+  --primary: rgb(47, 181, 120);
+  --dark: rgb(24, 82, 55);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  background: var(--background);
+}

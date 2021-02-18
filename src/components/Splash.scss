@@ -1,0 +1,29 @@
+@import '../styles/global.scss';
+
+#Splash {
+  width: 100%;
+  height: 100%;
+  padding: 64px;
+  .Row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .Letter {
+      font-size: 20vw;
+      font-weight: 900;
+      line-height: 0.9;
+      margin: 0;
+      padding: 0;
+    }
+    img {
+      height: 20vw;
+      margin: auto;
+    }
+    &:first-child {
+      color: var(--primary);
+    }
+    &:last-child {
+      color: var(--dark);
+    }
+  }
+}

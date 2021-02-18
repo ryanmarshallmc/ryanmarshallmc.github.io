@@ -1,0 +1,43 @@
+@import '../styles/global.scss';
+
+#Theme {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 24px;
+  border-radius: 32px;
+  transition: background 0.2s ease;
+  #Toggle {
+    position: absolute;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    top: -2px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    i {
+      font-size: 16px;
+      color: var(--white);
+    }
+  }
+  &.light {
+    background: var(--primary);
+    #Toggle {
+      background: var(--dark);
+      left: 20px;
+    }
+  }
+  &.dark {
+    background: var(--dark);
+    #Toggle {
+      background: var(--primary);
+      left: 0px;
+    }
+  }
+}
