@@ -4,20 +4,17 @@ import './Splash.scss'
 export default function Splash() {
   return (
     <section id="Splash">
-      <div className="Row">
-        {['R', 'Y', 'A', 'N'].map(i => (
-          <div key={i} className="Letter">
-            {i}
-          </div>
-        ))}
-        <img src="/ryan.png" alt="Ryan" />
-      </div>
-      <div className="Row">
-        {['M', 'c', 'H', 'E', 'N', 'R', 'Y'].map(i => (
-          <div key={i} className="Letter">
-            {i}
-          </div>
-        ))}
+      <img src="/ryan.png" alt="Ryan" />
+      <h2>hi, i'm ryan (mcHenry).</h2>
+      <div
+        id="Arrow"
+        onClick={() =>
+          window.scrollTo({ top: window.innerHeight * 1.5, behavior: 'smooth' })
+        }
+      >
+        <div>
+          <div />
+        </div>
       </div>
     </section>
   )

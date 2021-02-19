@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
 }
 
 body {
@@ -47,6 +48,15 @@ main {
     --background: rgb(239, 255, 248);
     --text: rgb(18, 18, 18);
   }
+
+  #ActivePage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+
   --black: rgb(18, 18, 18);
   --black-rgb: 18, 18, 18;
   --grey: rgb(160, 170, 160);
@@ -56,10 +66,27 @@ main {
   --white: rgb(255, 255, 255);
   --white-rgb: 255, 255, 255;
   --primary: rgb(47, 181, 120);
+  --primary-rgb: 47, 181, 120;
   --dark: rgb(24, 82, 55);
+  --dark-rgb: 24, 82, 55;
+  --blue: rgb(66, 132, 244);
+  --blue-rgb: 66, 132, 244;
   width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-  position: fixed;
+  min-height: 500vh;
   background: var(--background);
+  color: var(--text);
+
+  a {
+    display: inline-block;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+    text-shadow: 2px 2px rgba(var(--blue-rgb), 0.2);
+    transition: all 0.2s ease;
+    &:hover {
+      color: var(--primary);
+      transform: translate(-1px, -1px);
+      text-shadow: 3px 3px rgba(var(--primary-rgb), 0.2);
+    }
+  }
 }

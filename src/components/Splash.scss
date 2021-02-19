@@ -1,29 +1,52 @@
 @import '../styles/global.scss';
 
 #Splash {
-  width: 100%;
-  height: 100%;
-  padding: 64px;
-  .Row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    .Letter {
-      font-size: 20vw;
-      font-weight: 900;
-      line-height: 0.9;
-      margin: 0;
-      padding: 0;
+  @include page;
+  animation-delay: 0.4s;
+  @include flex-center;
+  img {
+    height: 48vh;
+  }
+  h2 {
+    margin: 0;
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+  }
+  #Arrow {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    cursor: pointer;
+    * {
+      transition: border-color 0.2s ease;
     }
-    img {
-      height: 20vw;
-      margin: auto;
+    &:hover {
+      div {
+        border-color: var(--blue);
+      }
     }
-    &:first-child {
-      color: var(--primary);
-    }
-    &:last-child {
-      color: var(--dark);
+    > div {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--text);
+      border-radius: 50%;
+      box-sizing: content-box;
+      div {
+        position: absolute;
+        bottom: 24px;
+        width: 20px;
+        height: 20px;
+        border-top: 1px solid var(--text);
+        border-right: 1px solid var(--text);
+        right: 20px;
+        box-sizing: content-box;
+        transform: rotate(135deg);
+        box-sizing: content-box;
+      }
     }
   }
 }

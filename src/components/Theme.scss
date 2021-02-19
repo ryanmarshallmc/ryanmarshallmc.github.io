@@ -2,12 +2,13 @@
 
 #Theme {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 20px;
   width: 48px;
   height: 24px;
   border-radius: 32px;
   transition: background 0.2s ease;
+  z-index: 10;
   #Toggle {
     position: absolute;
     border: none;
@@ -30,6 +31,7 @@
     background: var(--primary);
     #Toggle {
       background: var(--dark);
+      box-shadow: 0px 0px 8px 1px rgba(var(--black-rgb), 0.5);
       left: 20px;
     }
   }
@@ -37,6 +39,7 @@
     background: var(--dark);
     #Toggle {
       background: var(--primary);
+      box-shadow: 0px 0px 8px 1px rgba(var(--primary-rgb), 0.5);
       left: 0px;
     }
   }

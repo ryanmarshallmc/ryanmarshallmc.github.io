@@ -1,0 +1,56 @@
+@import '../styles/global.scss';
+
+.Input {
+  position: relative;
+  border: none;
+  color: var(--text);
+  overflow: hidden;
+  background: none;
+  width: 100%;
+  margin: 8px 0;
+
+  label {
+    position: absolute;
+    top: 15px;
+    left: 4px;
+    transition: all 0.1s ease;
+    font-weight: 400;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    padding: 18px 4px 12px 4px;
+    font-size: 16px;
+    transition: border 0.1s ease;
+    line-height: 1.2;
+    color: var(--text);
+    background: none;
+    border-bottom: 2px solid var(--primary);
+
+    &:focus {
+      border-bottom: 3px solid var(--blue);
+      outline: none;
+    }
+
+    &.error {
+      border-bottom: 3px solid var(--red);
+    }
+  }
+
+  input:focus + label,
+  textarea:focus + label,
+  &:not(.empty) label {
+    color: var(--blue);
+    font-size: 10px;
+    top: 0px;
+  }
+}
+
+.InputError {
+  margin: 4px 0 0 8px;
+  font-size: 14px;
+  color: var(--red);
+  font-weight: 500;
+}

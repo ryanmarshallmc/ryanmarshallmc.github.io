@@ -1,0 +1,87 @@
+@import '../styles/global.scss';
+
+#Projects {
+  @include page;
+  justify-content: flex-start;
+  .Projects {
+    @include flex-center;
+    flex-wrap: wrap;
+    width: 100%;
+    .Project {
+      position: relative;
+      width: 46%;
+      max-height: 36vh;
+      margin: 2%;
+      max-width: 600px;
+      border-radius: 4px;
+      overflow: hidden;
+      video {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        border-radius: 4px;
+      }
+      .Info {
+        background: rgba(var(--black-rgb), 0.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        @include flex-center;
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        h3 {
+          color: var(--white);
+          margin: 0;
+          font-weight: 100;
+          font-size: 48px;
+        }
+        p {
+          color: var(--white);
+          font-size: 18px;
+          font-weight: 500;
+          margin: 8px 0;
+        }
+        button {
+          margin-top: 16px;
+          background: var(--blue);
+          color: var(--white);
+          padding: 8px 32px;
+          border: none;
+          border-radius: 4px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          cursor: pointer;
+        }
+        @media (max-width: $mobile) {
+          padding: 8px;
+          h3 {
+            font-size: 32px;
+            line-height: 1;
+          }
+          p {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.2;
+          }
+          button {
+            font-size: 12px;
+            padding: 8px;
+          }
+        }
+      }
+      &:hover,
+      &:focus {
+        .Info {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

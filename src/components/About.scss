@@ -1,0 +1,14 @@
+@import '../styles/global.scss';
+
+#About {
+  @include page;
+  max-width: 800px;
+  strong {
+    font-weight: 900;
+  }
+  @media (max-width: $mobile) {
+    p {
+      font-size: 14px;
+    }
+  }
+}

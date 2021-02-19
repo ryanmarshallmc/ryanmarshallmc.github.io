@@ -1,0 +1,22 @@
+@import '../styles/global.scss';
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  h1 {
+    font-size: 24px;
+    padding: 16px;
+    margin: 0;
+    font-weight: 200;
+    transition: all 0.2s ease;
+    color: var(--primary);
+
+    &:hover {
+      color: var(--blue);
+      cursor: pointer;
+    }
+  }
+}

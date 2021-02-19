@@ -1,0 +1,20 @@
+@import '../styles/global.scss';
+
+#Contact {
+  @include page;
+  width: 100%;
+  max-width: 800px;
+
+  button {
+    background: var(--primary);
+    border-radius: 4px;
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.2;
+    }
+  }
+}
