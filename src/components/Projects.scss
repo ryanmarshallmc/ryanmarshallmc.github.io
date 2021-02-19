@@ -15,6 +15,7 @@
       max-width: 600px;
       border-radius: 4px;
       overflow: hidden;
+      transition: all 0.3s ease;
       video {
         width: 100%;
         min-height: 100%;
@@ -35,6 +36,7 @@
         padding: 16px;
         z-index: 2;
         opacity: 0;
+        pointer-events: none;
         transition: opacity 0.2s ease;
         h3 {
           color: var(--white);
@@ -80,6 +82,7 @@
       &:focus {
         .Info {
           opacity: 1;
+          pointer-events: all;
         }
       }
     }

@@ -8,8 +8,7 @@ export default function Projects() {
   const projects = [
     {
       name: 'iZotope Spire',
-      description:
-        'A completely, completely collaborative cloud based music production platform.',
+      description: 'A collaborative cloud based music production platform.',
       link: 'https://share.izotope.com/c/f903f32e-a485-4447-b74d-9c0c60f3180c',
       video: isMobile ? '/spire_mobile.mov' : '/spire_desktop.mov',
       button: 'Check It Out',
@@ -17,7 +16,7 @@ export default function Projects() {
     {
       name: 'Sharing Excess',
       description:
-        'A real time web application to track drivers rescuing food for nonprofits.',
+        'A real time web platform to track drivers rescuing food for nonprofits.',
       link: 'https://sharingexcess.com',
       video: isMobile ? '/se_mobile.mov' : '/se_desktop.mov',
       button: 'Learn More',
@@ -25,7 +24,7 @@ export default function Projects() {
     {
       name: 'Phorward',
       description:
-        'Philly nonprofit building pro bono software for Philly nonprofits.',
+        'A Philly nonprofit building pro bono software for Philly nonprofits.',
       link: 'https://phorward.org',
       video: isMobile ? '/phorward_mobile.mov' : '/phorward_desktop.mov',
       button: 'Learn More',
@@ -34,7 +33,6 @@ export default function Projects() {
 
   function Project({ video, name, description, link, button }) {
     const ref = useRef()
-    const isMobile = useIsMobile()
 
     const onMouseMove = e => {
       const height = ref.current.clientHeight
@@ -42,8 +40,8 @@ export default function Projects() {
       const rect = e.target.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
-      const rotate_y = 20 * ((x - width / 2) / width)
-      const rotate_x = -20 * ((y - height / 2) / height)
+      const rotate_y = 32 * ((x - width / 2) / width)
+      const rotate_x = -32 * ((y - height / 2) / height)
       ref.current.style.transform = `perspective(500px) rotateX(${rotate_x}deg) rotateY(${rotate_y}deg)`
     }
 
@@ -55,8 +53,8 @@ export default function Projects() {
       <div
         className="Project"
         ref={ref}
-        onMouseMove={isMobile ? onMouseMove : null}
-        onMouseOut={isMobile ? onMouseOut : null}
+        onMouseMove={onMouseMove}
+        onMouseOut={onMouseOut}
       >
         <video autoPlay muted loop src={video} />
         <div className="Info">
