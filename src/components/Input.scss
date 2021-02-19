@@ -8,6 +8,7 @@
   background: none;
   width: 100%;
   margin: 8px 0;
+  border-radius: 0;
 
   label {
     position: absolute;
@@ -28,6 +29,7 @@
     color: var(--text);
     background: none;
     border-bottom: 2px solid var(--primary);
+    border-radius: 0;
 
     &:focus {
       border-bottom: 3px solid var(--blue);

@@ -11,6 +11,7 @@ export default function Projects() {
       description: 'A collaborative cloud based music production platform.',
       link: 'https://share.izotope.com/c/f903f32e-a485-4447-b74d-9c0c60f3180c',
       video: isMobile ? '/spire_mobile.mov' : '/spire_desktop.mov',
+      poster: isMobile ? '/spire_mobile.png' : 'spire_desktop.png',
       button: 'Check It Out',
     },
     {
@@ -19,7 +20,8 @@ export default function Projects() {
         'A real time web platform to track drivers rescuing food for nonprofits.',
       link: 'https://sharingexcess.com',
       video: isMobile ? '/se_mobile.mov' : '/se_desktop.mov',
-      button: 'Learn More',
+      poster: isMobile ? '/se_mobile.png' : 'se_desktop.png',
+      button: 'Visit Site',
     },
     {
       name: 'Phorward',
@@ -27,11 +29,12 @@ export default function Projects() {
         'A Philly nonprofit building pro bono software for Philly nonprofits.',
       link: 'https://phorward.org',
       video: isMobile ? '/phorward_mobile.mov' : '/phorward_desktop.mov',
+      poster: isMobile ? '/phorward_mobile.png' : 'phorward_desktop.png',
       button: 'Learn More',
     },
   ]
 
-  function Project({ video, name, description, link, button }) {
+  function Project({ video, poster, name, description, link, button }) {
     const ref = useRef()
 
     const onMouseMove = e => {
@@ -56,7 +59,7 @@ export default function Projects() {
         onMouseMove={onMouseMove}
         onMouseOut={onMouseOut}
       >
-        <video autoPlay muted loop src={video} />
+        <video autoPlay muted loop playsInline src={video} poster={poster} />
         <div className="Info">
           <h3>{name}</h3>
           <p>{description}</p>

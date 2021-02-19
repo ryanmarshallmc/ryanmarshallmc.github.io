@@ -8,6 +8,13 @@ import Splash from './components/Splash'
 import Theme from './components/Theme'
 import './styles/index.scss'
 
+function setViewportHeight() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
+}
+
+setViewportHeight()
+window.addEventListener('resize', setViewportHeight)
+
 const pages = [<Splash />, <About />, <Projects />, <Contact />]
 
 const scrollOpacity = () => {

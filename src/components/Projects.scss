@@ -16,6 +16,10 @@
       border-radius: 4px;
       overflow: hidden;
       transition: all 0.3s ease;
+      @media (max-width: $mobile) {
+        width: 40%;
+        max-height: 32vh;
+      }
       video {
         width: 100%;
         min-height: 100%;

@@ -6,6 +6,9 @@
   @include flex-center;
   img {
     height: 48vh;
+    @media (max-width: $mobile) {
+      height: 36vh;
+    }
   }
   h2 {
     margin: 0;
