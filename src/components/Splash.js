@@ -5,7 +5,7 @@ export default function Splash() {
   return (
     <section id="Splash">
       <img src="/ryan.png" alt="Ryan" />
-      <h2>hi, i'm ryan (mcHenry).</h2>
+      <h2>hi, i'm ryan mcHenry.</h2>
       <div
         id="Arrow"
         onClick={() =>

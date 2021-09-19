@@ -7,35 +7,42 @@ export default function About() {
     <section id="About">
       <h2>my name is ryan (he/him).</h2>
       <p>
-        I'm a designer and developer working @{' '}
+        I'm a developer working @{' '}
         <ExternalLink to="https://izotope.com">iZotope</ExternalLink> on the
         Cloud Research team. We use the latest browser tech to make music
-        production more collaborative. I also volunteer as a mentor with{' '}
+        production more accessible and collaborative.
+      </p>
+      <p>
+        I also work as the Director of Technology @{' '}
+        <ExternalLink to="https://sharingexcess.com">
+          Sharing Excess
+        </ExternalLink>{' '}
+        in Philadelphia, PA. SE helps redistribute food from wholesale markets,
+        grocery stores, and restaurants to local pantries and shelters. We
+        manage a network of over 150 local nonprofits and volunteers with a
+        serverless stack built on React, Sass, Next.js, and Firebase, and
+        deliver over 100,000 lbs. of food every month.
+      </p>
+      <p>
+        As a volunteer, I help mentor early career engineers @{' '}
         <ExternalLink to="https://resilientcoders.org">
           Resilient Coders
-        </ExternalLink>{' '}
-        training the next generation of progressive engineers and change makers
-        (go donate money if you can!)
+        </ExternalLink>
+        . RC defines what a coding bootcamp should be - radically free with full
+        living stipends, and focused on building the pathway for women and PoC
+        to enter the software industry. You should donate! Monthly!
       </p>
       <p>
-        I manage <ExternalLink to="https://phorward.org">Phorward</ExternalLink>
-        , a nonprofit devoted to Software as a{' '}
-        <span style={{ fontStyle: 'italic' }}>*Public </span> Service. We build
-        apps, manage data, track analytics, the works - all for nonprofits that
-        make Philly better, all for free. Know a project or organization that
-        needs support? Reach out{' '}
-        <ExternalLink to="https://phorward.org/contact">here</ExternalLink>.
+        I live in Philadelphia with my rescue pitbull Dennis. Come say hi
+        sometime.
       </p>
       <p>
-        I live in Philadelphia with my partner Liv and our rescue pitbull
-        Dennis. Come say hi sometime, we love folks (no covid pls).
+        <strong>things I like:</strong> open source, equitable education,
+        drumming, cities where it's always sunny
       </p>
       <p>
-        <strong>things I like:</strong> npm, React, SASS, equitable education,
-        drums, cities where it's always sunny, wawa
-      </p>
-      <p>
-        <strong>things I dislike:</strong> servers, "java", pirates, sheetz
+        <strong>things I dislike:</strong> void pointers, pointer pointers,
+        basically any pointers
       </p>
     </section>
   )

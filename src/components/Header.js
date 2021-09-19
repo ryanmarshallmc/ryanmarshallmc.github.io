@@ -9,7 +9,7 @@ export default function Header() {
           window.scrollTo({ top: window.innerHeight * 0.5, behavior: 'smooth' })
         }
       >
-        ryan (mcHenry)
+        ryan mcHenry
       </h1>
     </header>
   )
